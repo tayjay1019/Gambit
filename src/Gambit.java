@@ -8,6 +8,7 @@ public class Gambit {
 
 
     public void initialize(){
+        displayRules();
         setBoardValue();
         printBoard();
     }
@@ -49,4 +50,28 @@ public class Gambit {
         }
         System.out.println();
     }
+
+    public void displayRules(){
+        System.out.println("----------Dragons Gambit--------");
+        System.out.println("The game is about playing cards to control territory on the board.");
+        System.out.println("Each part of the board is outlined with a Row and Column number ex: 2-7 row 2 column 7");
+        System.out.println("Below that is the current value of the space and who controls it");
+        System.out.println("N = neutral C = center R = red or player-1 B = blue or player-2");
+        System.out.println("On a players turn, they may play one or all of the cards in their hand on");
+        System.out.println("territory they don't already control, provided that the number of the card is higher");
+        System.out.println("than what is displayed, including other players territory.");
+        System.out.println("At the start of the players next turn, they will draw cards equal to the number");
+        System.out.println("of spaces on the board they control.  If the player has lost all territory and");
+        System.out.println("can draw no cards, the game is over and the opponent is the winner.");
+        System.out.println("When a player has no more cards to draw from their deck, the game will end");
+        System.out.println("after that players turn and points will be calculated.");
+        System.out.println("A player gets 1 point for each space on the board they control, plus the");
+        System.out.println("point value each card is worth.");
+        System.out.println("The player with the most spaces around the center space will gain control of");
+        System.out.println("the space and its value will be added to their final score.");
+        System.out.println("The player with the most points is the winner.");
+        System.out.println("\n\n");
+
+    }
+
 }
