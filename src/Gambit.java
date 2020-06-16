@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Gambit {
 
-    private static ArrayList<String> boardValue = new ArrayList<>();
-    private static ArrayList<String> boardHolder = new ArrayList<>();
+    public static ArrayList<String> boardValue = new ArrayList<>();
+    public static ArrayList<String> boardHolder = new ArrayList<>();
 
 
 

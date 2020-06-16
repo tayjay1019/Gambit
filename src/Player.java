@@ -13,7 +13,6 @@ public class Player {
     public void atStart(){
         populateDeck();
         startingHand();
-        showHand();
     }
 
     public void populateDeck(){
@@ -53,10 +52,38 @@ public class Player {
         }
     }
 
-    private void showHand(){
-        System.out.println(hand);
-        System.out.println("Deck Size = " + deck.size());
+    public String getPlayerToken() {
+        return playerToken;
     }
 
+    public void showHand(){
+        System.out.println(hand);
+       // System.out.println("Deck Size = " + deck.size());
+    }
+
+    public String getCard(int index){
+        return hand.get(index);
+    }
+
+    public void discardCard(int index){
+        hand.remove(index);
+    }
+
+    public int getHandSize(){
+        return hand.size();
+    }
+
+    public int getDeckSize(){
+        return deck.size();
+    }
+
+    public void drawCard(int times){
+        Random random = new Random();
+        for (int i = 0; i < times; i++){
+            int num = random.nextInt(deck.size());
+            hand.add(deck.get(num));
+            deck.remove(num);
+        }
+    }
 
 }
